@@ -9,13 +9,18 @@ terraform {
     hostname = "tfcdev-da6ca1b6.ngrok.app"
   }
 
-  # amd provider
-  # required_providers {
+  required_providers {
+  #  amd provider
   #    discord = {
   #    source = "prod9/discord"
   #    version = "0.0.4-p9"
   #  }
-  # }
+    tfe = {
+      version = "~> 0.64.0"
+    }
+   }
+
+
 }
 
 resource "random_id" "random" {
